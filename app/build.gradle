@@ -1,8 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
+    sourceSets{
+        main.jniLibs.srcDirs=['libs']
+    }
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.dada.android"
         minSdkVersion 15
@@ -25,6 +29,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile 'cn.bmob.android:bmob-im:2.0.9@aar'
+    compile 'cn.bmob.android:bmob-sdk:3.5.6'
+    compile 'cn.bmob.android:http-legacy:1.0'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta3'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'

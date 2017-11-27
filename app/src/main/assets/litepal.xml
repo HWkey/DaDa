@@ -2,7 +2,7 @@
     <dbname value="dada"/>
     <version value="1"/>
     <list>
-        <mapping class="com.dada.android.db.car"/>
+        <mapping class="com.dada.android.db.Cark"/>
         <mapping class="com.dada.android.db.Person"/>
     </list>
 </litepal>

@@ -2,26 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="姓名："
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/text_get"
+            android:id="@+id/et_get"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入你的姓名" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别："
+            android:textSize="25sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男" />
+
+            <RadioButton
+                android:id="@+id/rb_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号："
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入你的身份证号" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,57 +80,46 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="性别："
-            android:textSize="25sp"/>
+            android:text="车型："
+            android:textSize="25dp"/>
         <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
+            android:id="@+id/rg_cheku"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioButton
-                android:id="@+id/man"
-                android:layout_width="wrap_content"
+                android:id="@+id/cb_jiaoche"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="男"/>
+                android:layout_weight="1"
+                android:text="轿车"
+                android:textSize="20sp" />
+
             <RadioButton
-                android:id="@+id/woman"
-                android:layout_width="wrap_content"
+                android:id="@+id/cb_pika"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="女" />
+                android:layout_weight="1"
+                android:text="皮卡"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/cb_gongjiao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="公交"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/cb_huoche"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="货车"
+                android:textSize="20sp" />
         </RadioGroup>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <CheckBox
-            android:id="@+id/la"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="轿车" />
-        <CheckBox
-            android:id="@+id/haixian"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="皮卡"/>
-        <CheckBox
-            android:id="@+id/suan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="公交"/>
-        <CheckBox
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="货车"/>
     </LinearLayout>
 
     <LinearLayout
@@ -92,11 +132,13 @@
             android:layout_height="wrap_content"
             android:text="最高预算:"
             android:textSize="25sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
+
         <SeekBar
             android:id="@+id/seekbar"
             android:layout_width="0dp"
@@ -104,34 +146,40 @@
             android:layout_weight="6"
             android:max="1000"
             android:progress="0" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <Button
             android:id="@+id/button_find"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="寻找"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
+
         <ImageView
             android:id="@+id/button_image"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher" />
+
         <Button
             android:id="@+id/button_show"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="show"/>
+            android:text="show" />
     </LinearLayout>
+
 
 
 
