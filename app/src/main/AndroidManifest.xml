@@ -19,15 +19,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:label="dada">
+        <activity
+            android:name=".MainActivity"
+            android:label="dada"></activity>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MakeMenu"></activity>
+        <activity android:name=".MakeMenu" />
+        <activity android:name=".Zhuce"></activity>
     </application>
 
 </manifest>

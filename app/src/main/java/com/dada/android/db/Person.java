@@ -13,6 +13,7 @@ public class Person extends BmobObject {
     private String sex;
     private String id;
     private String phone;
+    private String password;
     public void setName(String name){
         this.name=name;
     }
@@ -36,5 +37,11 @@ public class Person extends BmobObject {
     }
     public String getPhone(){
         return phone;
+    }
+    public void setPassword(String password){
+        this.password=password;
+    }
+    public String getPassword(){
+        return password;
     }
 }

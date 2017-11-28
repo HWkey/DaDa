@@ -14,13 +14,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="姓名："
-            android:textSize="25sp" />
-
-        <EditText
-            android:id="@+id/et_get"
-            android:layout_width="match_parent"
+            android:textSize="25sp"
+            android:textColor="#000"/>
+        <TextView
+            android:id="@+id/tv_getName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="请输入你的姓名" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 
@@ -33,26 +33,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="性别："
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="#000"/>
 
-        <RadioGroup
-            android:id="@+id/rg_sex"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rb_man"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="男" />
-
-            <RadioButton
-                android:id="@+id/rb_woman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="女" />
-        </RadioGroup>
+        <TextView
+            android:id="@+id/tv_getSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,13 +51,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="身份证号："
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textColor="#000"/>
 
-        <EditText
-            android:id="@+id/et_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="请输入你的身份证号" />
+        <TextView
+            android:id="@+id/tv_getId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
@@ -81,7 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="车型："
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:textColor="#000"/>
         <RadioGroup
             android:id="@+id/rg_cheku"
             android:layout_width="wrap_content"
@@ -131,7 +119,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="最高预算:"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="#000"/>
 
         <TextView
             android:layout_width="wrap_content"

@@ -1,6 +1,5 @@
 package com.dada.android;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +25,6 @@ public class MakeMenu extends AppCompatActivity {
     private EditText et_get, et_id;
     private Button show;
     private RadioGroup radioGroup;
-    private RadioButton man, woman;
     private SeekBar seekBar;
     private String type;
 
@@ -38,10 +36,7 @@ public class MakeMenu extends AppCompatActivity {
     }
 
     public void initNews() {
-        et_get = (EditText) findViewById(R.id.et_get);
         show = (Button) findViewById(R.id.button_show);
-        man = (RadioButton) findViewById(R.id.rb_man);
-        woman = (RadioButton) findViewById(R.id.rb_woman);
         radioGroup = (RadioGroup) findViewById(R.id.rg_sex);
         seekBar = (SeekBar) findViewById(R.id.seekbar);
         et_id = (EditText) findViewById(R.id.et_id);
@@ -75,12 +70,7 @@ class RadioGroupButton implements OnCheckedChangeListener {
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
         switch (i) {
-            case R.id.rb_man:
-                Toast.makeText(MainActivity.mainActivity, "男性", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.rb_woman:
-                Toast.makeText(MainActivity.mainActivity, "女性", Toast.LENGTH_SHORT).show();
-                break;
+
 
         }
     }

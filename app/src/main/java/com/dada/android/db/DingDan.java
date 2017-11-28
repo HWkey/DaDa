@@ -9,50 +9,26 @@ import cn.bmob.v3.BmobObject;
 
 public class DingDan extends BmobObject {
     private Integer num;
-    private Cark cark;
-    private Person person;
-    private Integer id;
+    private String cid;
+    private String pid;
 
-
-    public void setId(Integer id) {
-        this.id = id;
+    public Integer getNum() {
+        return num;
     }
-
-    public Integer getId() {
-        return id;
-    }
-
 
     public void setNum(Integer num) {
         this.num = num;
     }
-
-
-    public Cark getCark() {
-        return cark;
+    public void setCid(String cid){
+        this.cid=cid;
     }
-
-    public void setCark(Cark cark) {
-        this.cark = cark;
+    public String getCid(){
+        return cid;
     }
-
-
-    public int getNum() {
-        return num;
+    public void setPid(String pid){
+        this.pid=pid;
     }
-
-    public void setNum(int num) {
-        this.num = num;
+    public String getPid(){
+        return pid;
     }
-
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-
 }
