@@ -21,13 +21,13 @@ import cn.bmob.v3.listener.SaveListener;
 
 import static android.widget.RadioGroup.*;
 
-public class Zhuce extends AppCompatActivity {
+public class Zhuce extends ActivityCollector {
     private Person person;
     private EditText et_name, et_phone, et_id, et_getPassword1, et_getPassword2;
     private RadioGroup sex;
     private RadioButton man,woman;
     private Button button_send;
-    String sex1 = "男";
+    String sex1 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,6 @@ public class Zhuce extends AppCompatActivity {
                                                    case R.id.rb_woman:
                                                        sex1 = "女";
                                                        break;
-
                                                }
                                            }
                                        });
@@ -73,6 +72,7 @@ public class Zhuce extends AppCompatActivity {
                                                 Toast.makeText(Zhuce.this, "创建数据成功", Toast.LENGTH_SHORT).show();
                                             } else {
                                                 Log.i("bmob", "失败：" + e.getMessage() + "," + e.getErrorCode());
+                                                Toast.makeText(Zhuce.this, "该身份证号已经被注册", Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     }
@@ -83,6 +83,9 @@ public class Zhuce extends AppCompatActivity {
                 } else {
                     Toast.makeText(Zhuce.this, "前后密码不一致。请重新输入", Toast.LENGTH_SHORT).show();
                     }
+            Intent intent=new Intent(Zhuce.this,MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

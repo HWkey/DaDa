@@ -1,19 +1,24 @@
 package com.dada.android;
 
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Toast;
+
+import com.dada.android.db.Cark;
+
+import java.io.File;
+import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.datatype.BmobFile;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 import static android.widget.Toast.*;
 
@@ -21,32 +26,35 @@ import static android.widget.Toast.*;
  * Created by asus1 on 2017/11/27.
  */
 
-public class MakeMenu extends AppCompatActivity {
-    private EditText et_get, et_id;
+public class MakeMenu extends AppCompatActivity{
     private Button show;
-    private RadioGroup radioGroup;
     private SeekBar seekBar;
     private String type;
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shouye);
         initNews();
         setListener();
+        BmobQuery<Cark>query=new BmobQuery();
+        query.findObjects(new FindListener<Cark>() {
+            @Override
+            public void done(List<Cark> list, BmobException e) {
+                if (e==null){
+                    for (Cark cark:list){
+                    }
+                }
+            }
+        });
     }
 
     public void initNews() {
         show = (Button) findViewById(R.id.button_show);
-        radioGroup = (RadioGroup) findViewById(R.id.rg_sex);
         seekBar = (SeekBar) findViewById(R.id.seekbar);
-        et_id = (EditText) findViewById(R.id.et_id);
     }
 
     public void setListener() {
         ButtonListener buttonListener = new ButtonListener();
         show.setOnClickListener(buttonListener);
-        RadioGroupButton radioGroupButton = new RadioGroupButton();
-        radioGroup.setOnCheckedChangeListener(radioGroupButton);
         SeekBarListener seekBarListener = new SeekBarListener();
         seekBar.setOnSeekBarChangeListener(seekBarListener);
 
@@ -64,18 +72,6 @@ class ButtonListener implements OnClickListener {
         }
     }
 }
-
-class RadioGroupButton implements OnCheckedChangeListener {
-
-    @Override
-    public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
-        switch (i) {
-
-
-        }
-    }
-}
-
 class SeekBarListener implements OnSeekBarChangeListener {
 
     @Override

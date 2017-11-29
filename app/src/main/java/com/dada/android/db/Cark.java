@@ -2,7 +2,10 @@ package com.dada.android.db;
 
 import org.litepal.crud.DataSupport;
 
+import java.io.File;
+
 import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.datatype.BmobFile;
 
 /**
  * Created by asus1 on 2017/11/23.
@@ -15,6 +18,16 @@ public class Cark extends BmobObject {
     private Integer price;
     private String type;
     private Integer id;
+    private File pic;
+    public File getPic() {
+        return pic;
+    }
+
+    public void setPic(File pic) {
+        this.pic = pic;
+    }
+
+
 
     public Integer getId() {
         return id;
