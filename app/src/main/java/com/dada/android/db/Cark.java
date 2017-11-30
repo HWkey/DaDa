@@ -18,13 +18,13 @@ public class Cark extends BmobObject {
     private Integer price;
     private String type;
     private Integer id;
-    private File pic;
-    public File getPic() {
-        return pic;
+    private BmobFile drawable;
+    public BmobFile getDrawable() {
+        return drawable;
     }
 
-    public void setPic(File pic) {
-        this.pic = pic;
+    public void setDrawable(BmobFile pic) {
+        this.drawable = pic;
     }
 
 

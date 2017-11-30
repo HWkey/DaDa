@@ -1,6 +1,7 @@
 package com.dada.android;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -26,7 +28,8 @@ public class Zhuce extends ActivityCollector {
     private EditText et_name, et_phone, et_id, et_getPassword1, et_getPassword2;
     private RadioGroup sex;
     private RadioButton man,woman;
-    private Button button_send;
+    private Button button_send,button_shangchuan,button_chongchuan;
+    private ImageView image_head;
     String sex1 ;
 
     @Override
@@ -36,11 +39,6 @@ public class Zhuce extends ActivityCollector {
         setContentView(R.layout.activity_zhuce);
         initNews();
         person = new Person();
-        button_send = (Button) findViewById(R.id.button_send);
-
-        sex = (RadioGroup) findViewById(R.id.rg_sex);
-        man=(RadioButton)findViewById(R.id.rb_man);
-        woman=(RadioButton)findViewById(R.id.rb_woman);
         sex.setOnCheckedChangeListener(new OnCheckedChangeListener() {
                                            @Override
                                            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
@@ -91,6 +89,10 @@ public class Zhuce extends ActivityCollector {
     }
 
     public void initNews() {
+        button_send = (Button) findViewById(R.id.button_send);
+        sex = (RadioGroup) findViewById(R.id.rg_sex);
+        man=(RadioButton)findViewById(R.id.rb_man);
+        woman=(RadioButton)findViewById(R.id.rb_woman);
         et_id = (EditText) findViewById(R.id.et_id);
         et_name = (EditText) findViewById(R.id.et_getName);
         et_phone = (EditText) findViewById(R.id.et_phone);

@@ -2,6 +2,8 @@ package com.dada.android.db;
 
 import org.litepal.crud.DataSupport;
 
+import java.io.File;
+
 import cn.bmob.v3.BmobObject;
 
 /**
@@ -14,6 +16,16 @@ public class Person extends BmobObject {
     private String id;
     private String phone;
     private String password;
+    private File head;
+    public File getTouxiang() {
+        return head;
+    }
+
+    public void setTouxiang(File head) {
+       this.head=head;
+    }
+
+
     public void setName(String name){
         this.name=name;
     }
