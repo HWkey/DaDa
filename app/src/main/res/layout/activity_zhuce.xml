@@ -46,15 +46,15 @@
                 android:id="@+id/rb_man"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="男"
-                android:checked="false"></RadioButton>
+                android:checked="false"
+                android:text="男"></RadioButton>
 
             <RadioButton
                 android:id="@+id/rb_woman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="女"
-                android:checked="false"></RadioButton>
+                android:checked="false"
+                android:text="女"></RadioButton>
         </RadioGroup>
     </LinearLayout>
 
@@ -66,15 +66,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="身份证号："
+            android:text="邮箱号："
             android:textColor="#000"
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/et_id"
+            android:id="@+id/et_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入你的身份证号" />
+            android:hint="请输入你的电子邮箱" />
     </LinearLayout>
 
     <LinearLayout

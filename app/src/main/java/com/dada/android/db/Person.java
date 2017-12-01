@@ -13,7 +13,7 @@ import cn.bmob.v3.BmobObject;
 public class Person extends BmobObject {
     private String name;
     private String sex;
-    private String id;
+    private String email;
     private String phone;
     private String password;
     private File head;
@@ -39,10 +39,10 @@ public class Person extends BmobObject {
         return sex;
     }
     public void setId(String id){
-        this.id=id;
+        this.email=id;
     }
     public String getId(){
-        return id;
+        return email;
     }
     public void setPhone(String phone){
         this.phone=phone;
@@ -55,5 +55,8 @@ public class Person extends BmobObject {
     }
     public String getPassword(){
         return password;
+    }
+    public String toString(){
+        return "姓名"+name+"e_mail"+email;
     }
 }
