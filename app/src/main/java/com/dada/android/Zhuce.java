@@ -41,6 +41,7 @@ public class Zhuce extends ActivityCollector {
         setContentView(R.layout.activity_zhuce);
         initNews();
         person = new Person();
+        //选择性别
         sex.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
